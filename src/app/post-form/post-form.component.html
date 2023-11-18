@@ -1,0 +1,13 @@
+<form (ngSubmit)="savePost()">
+    <label>Title:</label>
+    <input [(ngModel)]="post.title" name="title" required>
+  
+    <label>Content:</label>
+    <textarea [(ngModel)]="post.content" name="content" required></textarea>
+  
+    <label>Author:</label>
+    <input [(ngModel)]="post.author" name="author" required>
+  
+    <button type="submit">{{ isEditing ? 'Update Post' : 'Add Post' }}</button>
+  </form>
+  

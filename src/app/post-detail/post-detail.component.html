@@ -1,0 +1,11 @@
+<h2>{{ post.title }}</h2>
+<p>{{ post.content }}</p>
+<p>Author: {{ post.author }}</p>
+<button (click)="deletePost(post.id)">Delete</button>
+<a [routerLink]="'/edit-post/' + post.id">Edit</a>
+<h3>Comments:</h3>
+<div *ngFor="let comment of post.comments">
+  <p>{{ comment.content }}</p>
+</div>
+<textarea [(ngModel)]="newCommentContent" name="newComment"></textarea>
+<button (click)="addComment()">Add Comment</button>

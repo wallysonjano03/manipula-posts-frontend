@@ -1,0 +1,11 @@
+<div *ngFor="let post of posts">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <p>Author: {{ post.author }}</p>
+    <!-- Adicione botões para editar/excluir se necessário -->
+  </div>
+
+  <!-- Adicione botões para editar/excluir -->
+  
+<button (click)="deletePost(posts.id)">Delete</button>
+<a [routerLink]="'/edit-post/' + posts.id">Edit</a>
